@@ -1,6 +1,6 @@
 FROM java:8
 
-ADD target/helloworld-0.0.1-SNAPSHOT.jar /helloworld.jar
+ADD helloworld-0.0.1-SNAPSHOT.jar /helloworld.jar
 
 COPY . /data/springboot-helloworld
 WORKDIR /data/springboot-helloworld
