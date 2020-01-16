@@ -11,7 +11,7 @@ DATE=`date +%Y%m%d%H%M`
 function build(){
 	echo "开始构建镜像..."
 	cd $BASE_PATH
-	docker build -t hello .
+	sudo docker build -t hello .
 }
 
 # 运行docker容器
@@ -19,13 +19,13 @@ function run(){
 	build
 	if [ -n "$CID" ]; then
 		echo "存在hello容器，CID=$CID,重启docker容器 ..."
-			 docker stop $CID
-			 docker rm $CID
-			 docker run -d -p 8085:8085 hello
+			sudo docker stop $CID
+			sudo docker rm $CID
+			sudo docker run -d -p 8085:8085 hello
 		echo "hello容器重启完成"
 	else
 		echo "不存在hello容器，docker run创建容器..."
-			 docker run -d -p 8085:8085 hello
+			sudo docker run -d -p 8085:8085 hello
 		echo "hello容器创建完成"
 	fi
 }
