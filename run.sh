@@ -16,8 +16,6 @@ function build(){
 
 # 运行docker容器
 function run(){
-	backup
-	transfer
 	build
 	if [ -n "$CID" ]; then
 		echo "存在hello容器，CID=$CID,重启docker容器 ..."
