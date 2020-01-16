@@ -15,12 +15,7 @@ function build(){
 }
 
 # 运行docker容器
-# 添加docker用户组
-# 将登陆用户加入到docker用户组中
 function run(){
-    groupadd docker
-    gpasswd -a $USER docker
-    newgrp docker
 	build
 	if [ -n "$CID" ]; then
 		echo "存在hello容器，CID=$CID,重启docker容器 ..."
