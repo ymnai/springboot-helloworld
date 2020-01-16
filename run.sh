@@ -18,8 +18,8 @@ function build(){
 # 添加docker用户组
 # 将登陆用户加入到docker用户组中
 function run(){
-    sudo groupadd docker
-    sudo gpasswd -a $USER docker
+    groupadd docker
+    gpasswd -a $USER docker
     newgrp docker
 	build
 	if [ -n "$CID" ]; then
