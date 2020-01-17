@@ -4,6 +4,7 @@ BASE_PATH=/var/lib/jenkins/workspace/springboot-helloworld
 SOURCE_PATH=/var/lib/jenkins/workspace/springboot-helloworld/target
 #容器id
 CID=$(docker ps | grep "hello" | awk '{print $1}')
+MID=$(docker images|grep hello|awk '{print $3 }')
 
 DATE=`date +%Y%m%d%H%M`
 
@@ -23,6 +24,8 @@ function run(){
 			docker rm $CID
 			docker run -d -p 8085:8085 hello
 		echo "hello容器重启完成"
+		echo "删除旧的的hello镜像 ..."
+		    docker rmi $MID
 	else
 		echo "不存在hello容器，docker run创建容器..."
 			docker run -d -p 8085:8085 hello
