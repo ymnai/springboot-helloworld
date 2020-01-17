@@ -1,6 +1,6 @@
 FROM openjdk:8
 
-ADD helloworld-0.0.1-SNAPSHOT.jar /helloworld.jar
+ADD target/helloworld-0.0.1-SNAPSHOT.jar /helloworld.jar
 
 RUN bash -c 'touch /helloworld.jar'
 
