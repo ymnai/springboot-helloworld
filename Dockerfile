@@ -4,7 +4,7 @@ ADD target/helloworld-0.0.1-SNAPSHOT.jar /helloworld.jar
 
 RUN bash -c 'touch /helloworld.jar'
 
-EXPOSE 8082
+EXPOSE 8080
 
 ENTRYPOINT ["java", "-jar", "/helloworld.jar"]
 
