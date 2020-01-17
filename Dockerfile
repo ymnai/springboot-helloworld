@@ -1,10 +1,10 @@
-FROM java:8
+FROM openjdk:8
 
-ADD target/helloworld-0.0.1-SNAPSHOT.jar /helloworld.jar
+ADD helloworld-0.0.1-SNAPSHOT.jar /helloworld.jar
 
 RUN bash -c 'touch /helloworld.jar'
 
-EXPOSE 8080
+EXPOSE 12000
 
 ENTRYPOINT ["java", "-jar", "/helloworld.jar"]
 
