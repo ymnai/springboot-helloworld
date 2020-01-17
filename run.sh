@@ -24,11 +24,11 @@ function run(){
 			docker rm $CID
     echo "删除旧的hello镜像 ...$MID"
             docker rmi $MID
-			docker run -d -p 8080:8080 hello
+			docker run -d -p 8082:8082 hello
 		echo "hello容器重启完成"
 	else
 		echo "不存在hello容器，docker run创建容器..."
-			docker run -d -p 8080:8080 hello
+			docker run -d -p 8082:8082 hello
 		echo "hello容器创建完成"
 	fi
 }
