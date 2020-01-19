@@ -8,7 +8,7 @@ public class HomeController {
 
     @RequestMapping("/")
     String home() {
-        return "Hello from GazGeek! 测试删除旧的容器？";
+        return "Hello from GazGeek! 测试自动上传镜像first？";
     }
 
 }
