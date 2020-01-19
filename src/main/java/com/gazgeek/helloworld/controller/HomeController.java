@@ -8,7 +8,7 @@ public class HomeController {
 
     @RequestMapping("/")
     String home() {
-        return "Hello from GazGeek! 测试自动上传镜像到阿里云镜像仓库？";
+        return "Hello from GazGeek! 测试自动上传镜像到阿里云镜像仓库 2020-01-19？";
     }
 
 }
