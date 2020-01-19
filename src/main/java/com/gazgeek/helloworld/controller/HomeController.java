@@ -8,7 +8,7 @@ public class HomeController {
 
     @RequestMapping("/")
     String home() {
-        return "Hello from GazGeek! 输出修改，自动构建，无权限，添加用户组，赋予权限？";
+        return "Hello from GazGeek! 测试删除旧的容器？";
     }
 
 }
