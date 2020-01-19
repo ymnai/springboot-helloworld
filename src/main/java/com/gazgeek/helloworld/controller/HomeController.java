@@ -8,7 +8,7 @@ public class HomeController {
 
     @RequestMapping("/")
     String home() {
-        return "Hello from GazGeek! 2020-01-19";
+        return "Hello from GazGeek! 输出修改，自动构建？";
     }
 
 }
